@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\SuperHero.Application\SuperHero.Application.csproj" />
+    <ProjectReference Include="..\SuperHero.Infrastructure\SuperHero.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
