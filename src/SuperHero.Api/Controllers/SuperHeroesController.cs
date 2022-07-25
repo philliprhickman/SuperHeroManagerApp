@@ -43,10 +43,10 @@ namespace SuperHero.Api.Controllers
             await _superHeroService.UpdateAsync(superHero);
         }
 
-        [HttpDelete]
-        public async Task Remove([FromBody] SuperHeroModel superHero)
+        [HttpDelete("{id:int}")]
+        public async Task Remove(int id)
         {
-            await _superHeroService.RemoveAsync(superHero);
+            await _superHeroService.RemoveAsync(id);
         }
     }
 }

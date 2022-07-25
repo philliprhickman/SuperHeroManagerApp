@@ -60,6 +60,7 @@
     <Folder Include="dbo\Tables" />
     <Folder Include="dbo\StoredProcedures" />
     <Folder Include="dbo\StoredProcedures\SuperHeroes" />
+    <Folder Include="dbo\StoredProcedures\ComicBookcompanies" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\SuperHeroes.sql" />
@@ -68,6 +69,12 @@
     <Build Include="dbo\StoredProcedures\SuperHeroes\sp_SuperHeroes_GetById.sql" />
     <Build Include="dbo\StoredProcedures\SuperHeroes\sp_SuperHeroes_Insert.sql" />
     <Build Include="dbo\StoredProcedures\SuperHeroes\sp_SuperHeroes_Update.sql" />
+    <Build Include="dbo\Tables\ComicBookCompanies.sql" />
+    <Build Include="dbo\StoredProcedures\ComicBookcompanies\sp_ComicBookCompanies_Delete.sql" />
+    <Build Include="dbo\StoredProcedures\ComicBookcompanies\sp_ComicBookCompanies_GetAll.sql" />
+    <Build Include="dbo\StoredProcedures\ComicBookcompanies\sp_ComicBookCompanies_GetById.sql" />
+    <Build Include="dbo\StoredProcedures\ComicBookcompanies\sp_ComicBookCompanies_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\ComicBookcompanies\sp_ComicBookCompanies_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SuperHero.Database.publish.xml" />

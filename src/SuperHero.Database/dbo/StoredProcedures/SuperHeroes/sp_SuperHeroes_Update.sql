@@ -3,18 +3,22 @@
     @Name               VARCHAR(100),
     @Alias              VARCHAR(100),
     @Location           VARCHAR(255),
+    @OriginStory        TEXT,
     @Notes              TEXT,
-    @ComicBookCreator   VARCHAR(100)
+    @WikiPage           VARCHAR(255),
+    @ComicBookCompanyId INT
 AS
 BEGIN
     SET NOCOUNT ON
 
     UPDATE  [dbo].[SuperHeroes]
-    SET     [Name]              = @Name,
-            [Alias]             = @Alias,
-            [Location]          = @Location,
-            [Notes]             = @Notes,
-            [ComicBookCreator]  = @ComicBookCreator,
-            [DateUpdatedUtc]    = GETUTCDATE()
-    WHERE   [Id]                = @Id
+    SET     [Name]                  = @Name,
+            [Alias]                 = @Alias,
+            [Location]              = @Location,
+            [OriginStory]           = @OriginStory,
+            [Notes]                 = @Notes,
+            [WikiPage]              = @WikiPage,
+            [ComicBookCompanyId]    = @ComicBookCompanyId,
+            [DateUpdatedUtc]        = GETUTCDATE()
+    WHERE   [Id]                    = @Id
 END

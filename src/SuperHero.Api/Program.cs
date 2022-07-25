@@ -14,6 +14,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
+builder.Services.AddTransient<IComicBookCompanyRepository, ComicBookCompanyRepository>();
+builder.Services.AddTransient<IComicBookCompanyService, ComicBookCompanyService>();
 builder.Services.AddTransient<ISuperHeroRepository, SuperHeroRepository>();
 builder.Services.AddTransient<ISuperHeroService, SuperHeroService>();
 

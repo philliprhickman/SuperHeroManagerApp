@@ -8,5 +8,5 @@ public interface ISuperHeroService
     Task<SuperHeroModel> GetByIdAsync(int id);
     Task<SuperHeroModel> CreateAsync(SuperHeroModel superHeroModel);
     Task UpdateAsync(SuperHeroModel superHeroModel);
-    Task RemoveAsync(SuperHeroModel superHeroModel);
+    Task RemoveAsync(int id);
 }

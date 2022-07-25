@@ -2,6 +2,6 @@
 
 namespace SuperHero.Application.Interfaces.Repositories;
 
-public interface ISuperHeroRepository : IGenericRepository<SuperHeroModel>
+public interface IComicBookCompanyRepository : IGenericRepository<ComicBookCompanyModel>
 {
 }

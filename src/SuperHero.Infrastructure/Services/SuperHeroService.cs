@@ -28,9 +28,12 @@ public class SuperHeroService : ISuperHeroService
         return await _superHeroRepository.GetByIdAsync(id);
     }
 
-    public async Task RemoveAsync(SuperHeroModel superHeroModel)
+    public async Task RemoveAsync(int id)
     {
-        await _superHeroRepository.RemoveAsync(superHeroModel);
+        var hero = await _superHeroRepository.GetByIdAsync(id);
+
+        if (hero is not null)
+            await _superHeroRepository.RemoveAsync(hero);
     }
 
     public async Task UpdateAsync(SuperHeroModel superHeroModel)

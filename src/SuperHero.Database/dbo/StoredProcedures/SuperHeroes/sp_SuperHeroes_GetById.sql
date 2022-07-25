@@ -8,8 +8,10 @@ BEGIN
             [Name],
             [Alias],
             [Location],
+            [OriginStory],
             [Notes],
-            [ComicBookCreator]
+            [WikiPage],
+            [ComicBookCompanyId]
     FROM    [dbo].[SuperHeroes] (NOLOCK)
     WHERE   [Id] = @Id
 END

@@ -2,7 +2,6 @@
 using System.Data.SqlClient;
 using Dapper;
 using Microsoft.Extensions.Configuration;
-using SuperHero.Application.Interfaces;
 
 namespace SuperHero.Infrastructure.Persistence;
 
@@ -34,6 +33,12 @@ public class SqlDataAccess : ISqlDataAccess
         using IDbConnection connection = new SqlConnection(_configuration.GetConnectionString(connectionName));
 
         return await connection.QueryAsync<T>(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
+    }
+
+    public async Task<T> QuerySingleAsync<T>(string storedProcedure, T parameters, string connectionName = "DefaultConnection")
+    {        using IDbConnection connection = new SqlConnection(_configuration.GetConnectionString(connectionName));
+
+        return await connection.QuerySingleAsync<T>(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
     }
 
     public async Task SaveData<T>(string storedProcedure, T parameters, string connectionName = "DefaultConnection")

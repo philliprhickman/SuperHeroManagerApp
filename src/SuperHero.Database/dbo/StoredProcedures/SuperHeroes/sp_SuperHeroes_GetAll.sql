@@ -7,8 +7,10 @@ BEGIN
             [Name],
             [Alias],
             [Location],
+            [OriginStory],
             [Notes],
-            [ComicBookCreator]
+            [WikiPage],
+            [ComicBookCompanyId]
     FROM    [dbo].[SuperHeroes] (NOLOCK)
     WHERE   [DateDeletedUtc] IS NULL
 END
